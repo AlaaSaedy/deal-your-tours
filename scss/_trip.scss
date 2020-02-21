@@ -1,0 +1,184 @@
+//// Extra small devices (portrait phones, less than 576px)
+//// No media query since this is the default in Bootstrap
+//
+//// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+//
+//// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+//
+//// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+//
+//// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+
+
+// Main Sass File
+
+@import "reset", "style", "trips";
+
+
+/* Tabs*/
+
+.trip-header {
+    height: 300px;
+    background: url('../assets/tabs-header.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#tripNavTabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: $secondary;
+    font-size: 15px;
+}
+
+#tripNavTabs .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #000;
+    background-color: $primary;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.details-content .details-tab {
+    font-size: 15px;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+
+    p {
+        font-weight: lighter;
+    }
+
+    i {
+        padding-right: 3px;
+    }
+
+    ul {
+        font-size: 14px;
+    }
+}
+
+
+#carouselExampleIndicators {
+    .carousel-inner {
+        width: 100%;
+
+    }
+}
+
+
+
+/* ## REVIEWS SECTION ## */
+
+#nav-reviews {
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        width: .8em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ccc;
+    }
+
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+}
+
+
+
+/* ## TRIP FORM ## */
+
+.trip-sideForm {
+
+    background: #fff;
+
+    .fa-tag {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+    }
+
+    .form-group {
+        position: relative;
+
+        label i {
+            font-size: 20px;
+            width: 8px;
+        }
+
+        input {
+            background: none;
+            box-shadow: none;
+            height: 32px;
+        }
+    }
+
+    .persons-num {
+        input {
+            width: 132px;
+        }
+    }
+
+    .nav-pills .nav-link,
+    .nav-link {
+        color: #d8d8d8;
+        background-color: #f9f9f9;
+        border-color: #f3f3f3;
+        border-radius: 0;
+        font-size: 14px;
+
+        &.active {
+            color: $secondary;
+            font-size: 16px;
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.fa-user-circle {
+        color: #b3b9bf
+    }
+
+
+@media (min-width: 992px) {
+    .trip-sideForm {
+        margin-top: -110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trip-sideForm {
+        margin-top: 50px;
+    }
+}

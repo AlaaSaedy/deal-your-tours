@@ -1,0 +1,73 @@
+//// Extra small devices (portrait phones, less than 576px)
+//// No media query since this is the default in Bootstrap
+//
+//// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+//
+//// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+//
+//// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+//
+//// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+
+
+// Main Sass File
+
+@import "trip";
+
+
+.rent-steps {
+
+    .step-1,
+    .step-2,
+    .step-3 {
+        border-radius: 60px 60px 60px 60px;
+        -moz-border-radius: 60px 60px 60px 60px;
+        -webkit-border-radius: 60px 60px 60px 60px;
+        border: 0px solid #000000;
+    }
+
+    .step-2 {
+        background: #ccc;
+    }
+}
+
+.cars-sideForm {
+
+    background: #fff;
+
+    .input-group {
+        position: relative;
+
+        label {
+            position: absolute;
+            left: 49px;
+            top: 0;
+            width: 100px;
+            display: inline-block;
+            font-size: 13px;
+            z-index: 1;
+        }
+
+        .time-label {
+            left: 61%;
+        }
+
+        select {
+            height: 55px;
+        }
+
+        input[id=rentDate],
+        input[id=rentTime] {
+            height: 50px;
+        }
+
+        .fa {
+            font-size: 24px;
+            width: 8px;
+        }
+    }
+}

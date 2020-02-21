@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent A Car - Deal Your Tours</title>
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cars.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="container" id="home">
+            <div class="row justify-content-md-start justify-content-center">
+                <div class="contact-info col-md-8 col d-flex pt-2">
+                    <a class="mr-4" href="#"><i class="fa fa-phone pr-2"></i><span class="d-md-inline-block d-none">1-555-555-555</span>
+                    </a>
+                    <a href="#"><i class="fa fa-envelope pr-2"></i><span class="d-md-inline-block d-none">Info@dealyourtours.com</span></a>
+                </div>
+                <div class="currency col-md-4 col d-flex justify-content-end p-2">
+                    <select name="language" id="">
+                        <option value="En">EN</option>
+                        <option value="En">AR</option>
+                    </select>
+                    <select name="currencies" id="">
+                        <option value="USD">&#36; USD</option>
+                        <option value="EUR">&#163; EGP</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="container">
+            <div class="row site-navigation">
+                <nav class="navbar navbar-expand-lg rounded-sm my-sm-2 w-100">
+                    <a href="index.html"><img src="./assets/main-logo.png" alt="Deal your tours logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end mt-3 " id="mainNavigation">
+                        <div class="tabs d-lg-block navbar-nav">
+                            <div class="selector"></div>
+                            <a href="index.html" class="nav-item nav-link"><i class="fa fa-home pr-2"></i>Home</a>
+                            <a class="active nav-item nav-link" href="#"><i class="fa fa-plane pr-2"></i>Destinations</a>
+                            <a class="nav-item nav-link" href="trips.html"><i class="fa fa-suitcase pr-2"></i>Trips</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-car pr-2"></i>Rent A Car</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-address-card pr-2"></i>About Us</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-phone pr-2"></i>Contact</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-clipboard pr-2"></i>Blog</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <nav aria-label="breadcrumb" class="d-md-block d-none">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Rent A Car</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- ## RENT A CAR ## -->
+
+    <div class="container">
+        <h2 class="text-uppercase text-center font-weight-bolder">rent a car</h2>
+        <div class="rent-steps mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mt-md-0 mt-3">
+                    <div class="step-1 bg-secondary py-3">
+                        <p class="text-uppercase text-white text-center">choose your vehicle</p>
+                    </div>
+                </div>
+
+                <div class="col-md-1 d-md-block d-none">
+                    <div class="border-bottom border-dark h-50"></div>
+                </div>
+
+                <div class="col-md-3 mt-md-0 mt-3">
+                    <div class="step-2 py-3">
+                        <p class="text-uppercase text-white text-center">Passenger &amp; Transfers</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-1 d-md-block d-none">
+                    <div class="border-bottom border-dark h-50"></div>
+                </div>
+                
+                <div class="col-md-3 mt-md-0 mt-3">
+                    <div class="step-2 py-3">
+                        <p class="text-uppercase text-white text-center">payment &amp; Checkout Procces</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- LEFT SIDE FORM -->
+
+
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="cars-sideForm py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <form action="">
+                                    <div class="form-group">
+                                        <div class="form-check custom-checkbox d-flex justify-content-around">
+                                            <input id="customCheck1" type="checkbox" class="custom-control-input">
+                                            <label for="customCheck1" class="custom-control-label">From Airport</label>
+                                            <input id="customCheck2" type="checkbox" class="custom-control-input">
+                                            <label for="customCheck2" class="custom-control-label">From Airport</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-10">
+                                <div class="input-group mt-5">
+                                    <div class="input-group-prepend mr-4 mt-3">
+                                        <i class="fa fa-plane text-secondary"></i>
+                                    </div>
+                                    <label for="" class="pt-1 text-muted">Arrival Airport</label>
+                                    <select class="form-control pt-3 valid" name="" id="">
+                                        <option value="Hurghada" selected>Hurghada Airport</option>
+                                        <option value="El- Gouna">El- Gouna Airport</option>
+                                    </select>
+                                </div>
+                                <div><i class="fa fa-ellipsis-v text-secondary ml-1 mt-4"></i></div>
+                            </div>
+                            <div class="col-10">
+                                <div class="input-group mt-4">
+                                    <div class="input-group-prepend mr-4 mt-3">
+                                        <i class="fa fa-street-view text-secondary"></i>
+                                    </div>
+                                    <label for="" class="pt-1 text-muted">Going To</label>
+                                    <select class="form-control pt-3 valid" name="" id="">
+                                        <option value="Hurghada">Hurghada</option>
+                                        <option value="El-Gouna" selected>El- Gouna</option>
+                                    </select>
+                                </div>
+                                <div><i class="fa fa-ellipsis-v text-secondary ml-1 mt-4"></i></div>
+                            </div>
+                            <div class="col-10">
+                                <div class="input-group mt-4">
+                                    <div class="input-group-prepend mr-4">
+                                        <i class="fa fa-calendar-check-o text-secondary mt-2"></i>
+                                    </div>
+                                    <label for="" class="pt-1 mb-0 text-muted">Arrival Date</label>
+                                    <input type="text" class="form-control pt-4" id="rentDate">
+
+                                    <label for="" class="pt-1 mb-0 text-muted time-label">Time</label>
+                                    <input type="text" class="form-control pt-4 ml-3" id="rentTime">
+                                </div>
+                                <div><i class="fa fa-ellipsis-v text-secondary ml-1 mt-4"></i></div>
+                            </div>
+
+                            <div class="col-10">
+                                <div class="input-group mt-5">
+                                    <div class="input-group-prepend mr-4 mt-2">
+                                        <i class="fa fa-group text-secondary"></i>
+                                    </div>
+                                    <label for="" class="pt-1 mb-0 text-muted">Passengers</label>
+                                    <input type="text" class="form-control pt-4" id="rentDate">
+
+                                    <label for="" class="pt-1 mb-0 text-muted time-label">Kids</label>
+                                    <input type="text" class="form-control pt-4 ml-3" id="rentTime">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary text-uppercase mt-5 d-block mx-auto px-4">Search</button>
+                    </div>
+                </div>
+                <div class="col-lg-8 mx-md-auto">
+                    <div class="row border-left border-danger bg-white mx-0 mt-md-0 mt-5">
+                        <div class="col-lg-3">
+                            <div class="car-img d-flex justify-content-center">
+                                <img src="assets/car-1.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                            <h6 class="mt-4">Sedan Car</h6>
+                            <div class="d-flex justify-content-between mt-4">
+                                <span><i class="fa fa-taxi pr-2 text-secondary"></i>Up to 3 Passengers</span>
+                                <span><i class="fa fa-suitcase pr-2 text-secondary"></i>3 Medium Suitcases</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h6 class="text-center pt-2">Total One-Way Price</h6>
+                            <h2 class="text-secondary font-weight-bolder text-center">&#36; 85.00</h2>
+                            <button class="btn btn-secondary btn-block px-3 my-2 mx-auto">Select Car</button>
+                        </div>
+                    </div>
+                    <div class="row bg-white mt-5 mx-0 border-left border-secondary">
+                        <div class="col-lg-3">
+                            <div class="car-img d-flex justify-content-center">
+                                <img src="assets/car-1.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 class="mt-4">Sedan Car</h6>
+                            <div class="d-flex justify-content-between mt-4">
+                                <span><i class="fa fa-taxi pr-2 text-secondary"></i>Up to 3 Passengers</span>
+                                <span><i class="fa fa-suitcase pr-2 text-secondary"></i>3 Medium Suitcases</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h6 class="text-center pt-2">Total One-Way Price</h6>
+                            <h2 class="text-secondary font-weight-bolder text-center">&#36; 85.00</h2>
+                            <button class="btn btn-secondary btn-block px-3 my-2 mx-auto">Select Car</button>
+                        </div>
+                    </div>
+                    <div class="row mx-0 mt-5 border-left border-warning">
+                        <div class="col-lg-3 bg-white">
+                            <div class="car-img d-flex justify-content-center">
+                                <img src="assets/car-1.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 bg-white">
+                            <h6 class="mt-4">Sedan Car</h6>
+                            <div class="d-flex justify-content-between mt-4">
+                                <span><i class="fa fa-taxi pr-2 text-secondary"></i>Up to 3 Passengers</span>
+                                <span><i class="fa fa-suitcase pr-2 text-secondary"></i>3 Medium Suitcases</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 bg-white">
+                            <h6 class="text-center pt-2">Total One-Way Price</h6>
+                            <h2 class="text-secondary font-weight-bolder text-center">&#36; 85.00</h2>
+                            <button class="btn btn-secondary btn-block px-3 my-2 mx-auto">Select Car</button>
+                        </div>
+                    </div>
+                    <div class="row bg-white mt-5 mx-0 border-left border-info">
+                        <div class="col-lg-3">
+                            <div class="car-img d-flex justify-content-center">
+                                <img src="assets/car-1.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                            <h6 class="mt-4">Sedan Car</h6>
+                            <div class="d-flex justify-content-between mt-4">
+                                <span><i class="fa fa-taxi pr-2 text-secondary"></i>Up to 3 Passengers</span>
+                                <span><i class="fa fa-suitcase pr-2 text-secondary"></i>3 Medium Suitcases</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h6 class="text-center pt-2">Total One-Way Price</h6>
+                            <h2 class="text-secondary font-weight-bolder text-center">&#36; 85.00</h2>
+                            <button class="btn btn-secondary btn-block px-3 my-2 mx-auto">Select Car</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ## FOOTER ## -->
+
+
+    <footer id="#footer" class="bg-secondary mt-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 my-3">
+                    <div class="footer-contact d-flex align-items-center">
+                        <p class="text-white font-weight-bold text-uppercase h5"><i class="fa fa-headphones fa-2x pr-3"></i>for more help</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 d-flex align-items-center justify-content-md-end  my-3">
+                    <p class="text-white font-weight-bold h5"><i class="fa fa-phone pr-3"></i>+ 1-555-555-555</p>
+                </div>
+                <div style="border-bottom: 1px solid rgba(0,0,0,0.3); height 2px; width: 100%"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div>
+                        <img src="assets/logo-.png" class="img-fluid " alt="">
+                        <p class="text-white mt-4 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam repellendus sapiente est, placeat blanditiis reprehenderit quaerat id dolore enim sunt dolores facere, inventore commodi nostrum tempore labore eligendi rem adipisci!</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 offset-2 mt-3">
+                    <div class="row footer-nav">
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">Deal your tours</h5>
+                            <ul class="text-white font-weight-light mt-4">
+                                <li><a href="#"></a>Contact us</li>
+                                <li><a href="#"></a>Ordering &amp; Payment</li>
+                                <li><a href="#"></a>Shipping</li>
+                                <li><a href="#"></a>Returns</li>
+                                <li><a href="#"></a>FAQ</li>
+                                <li><a href="#"></a>Sizing Guide</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">resources</h5>
+                            <ul class="text-white font-weight-light text-capitalize mt-4">
+                                <li><a href="#"></a>manage my booking</li>
+                                <li><a href="#"></a>trips sitemap</li>
+                                <li><a href="#"></a>travel tips</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">information</h5>
+                            <ul class="text-white font-weight-light text-capitalize mt-4">
+                                <li><a href="#"></a>about us</li>
+                                <li><a href="#"></a>work with us</li>
+                                <li><a href="#"></a>privacy policy</li>
+                                <li><a href="#"></a>terms &amp; conditions</li>
+                                <li><a href="#"></a>press enquires</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <img src="assets/awards.png" alt="">
+                        <img src="assets/holiday-check.png" alt="">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-md-end align-items-center">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item"><img src="assets/visa.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/mastercard.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/paypal.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/cash.png" class="img-fluid" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter mt-4 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 text-center">
+                        <div>
+                            <p class="mb-0 text-white text-uppercase">Enjoy <span class="font-weight-bolder text-info">With</span><br><span class="text-info text-capitalize font-weight-bold">Deal Your Tours</span></p>
+                            <span class="text-light">Subscribe to get latest offers and deals</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center py-2">
+                        <form action="">
+                            <div class="subscribe input-group">
+                                <input id="search-box" size="50" type="text" placeholder="  Enter Your E-mail" />
+                                <button id="search-btn" value="" type="submit"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 d-flex justify-content-md-end justify-content-center py-md-0 pt-3 align-items-center social">
+                        <ul class="list-unstyled mb-0">
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-white font-weight-light mb-0">Copyrights 2020 Deal Your Tours © <br>Made with ❤️ by Holol Development</p>
+    </footer>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body></html>

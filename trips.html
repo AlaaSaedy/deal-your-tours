@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips - Deal Your Tours</title>
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/trips.css">
+</head>
+
+<body id="tripsPage">
+    <div class="topnav">
+        <div class="container" id="home">
+            <div class="row justify-content-md-start justify-content-center">
+                <div class="contact-info col-md-8 col d-flex pt-2">
+                    <a class="mr-4" href="#"><i class="fa fa-phone pr-2"></i><span class="d-md-inline-block d-none">1-555-555-555</span>
+                    </a>
+                    <a href="#"><i class="fa fa-envelope pr-2"></i><span class="d-md-inline-block d-none">Info@dealyourtours.com</span></a>
+                </div>
+                <div class="currency col-md-4 col d-flex justify-content-end p-2">
+                    <select name="language" id="">
+                        <option value="En">EN</option>
+                        <option value="En">AR</option>
+                    </select>
+                    <select name="currencies" id="">
+                        <option value="USD">&#36; USD</option>
+                        <option value="EUR">&#163; EGP</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="container">
+            <div class="row site-navigation">
+                <nav class="navbar navbar-expand-lg rounded-sm my-sm-2 w-100">
+                    <a href="index.html"><img src="./assets/main-logo.png" alt="Deal your tours logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end mt-3 " id="mainNavigation">
+                        <div class="tabs d-lg-block navbar-nav">
+                            <div class="selector"></div>
+                            <a href="#" class="nav-item nav-link"><i class="fa fa-home pr-2"></i>Home</a>
+                            <a class="active nav-item nav-link" href="#"><i class="fa fa-plane pr-2"></i>Destinations</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-suitcase pr-2"></i>Trips</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-car pr-2"></i>Rent A Car</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-address-card pr-2"></i>About Us</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-phone pr-2"></i>Contact</a>
+                            <a class="nav-item nav-link" href="#"><i class="fa fa-clipboard pr-2"></i>Blog</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <nav aria-label="breadcrumb" class="d-md-block d-none">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Trips</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container filter-form">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-muted my-4">Filter by</h5>
+                <fieldset class="text-muted">
+                    <legend class="text-secondary h6">Where To</legend>
+                    <div class="row">
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Cairo</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Luxor</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control customcheckbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Alexandria</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Aswan</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Hurghada</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Sharm El- Shiekh</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mt-4 text-muted">
+                    <legend class="text-secondary h6">Tour Sort</legend>
+                    <div class="row">
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Trips</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">Shore Excursions</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mt-4 text-muted">
+                    <legend class="text-secondary h6">Tour Type</legend>
+                    <div class="row">
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label"><i class="fa fa-user pr-1"></i>Invdividual</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label"><i class="fa fa-users pr-1"></i>Group</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mt-4">
+                    <div class="col-12">
+                        <form action="" class="d-flex justify-content-between">
+                            <div class="form-group px-1">
+                                <label for="" class="text-secondary h6">From</label>
+                                <input type="text" class="form-control rounded-0 border-0" id="datePicker1" placeholder="dd/mm/yy">
+                            </div>
+                            <div class="form-group px-1">
+                                <label for="" class="text-secondary h6">To</label>
+                                <input type="text" class="form-control rounded-0 border-0" id="datePicker2" placeholder="dd/mm/yy">
+                            </div>
+                        </form>
+                    </div>
+                </fieldset>
+                <fieldset class="mt-4 text-muted">
+                    <legend class="text-secondary h6">Duration</legend>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">1 - 2 days</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">3 - 7 days</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">14 - 20 days</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="custom-control custom-checkbox checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label for="" class="custom-control-label">20 - 30 days</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="my-4 text-muted">
+                    <legend class="text-secondary h6">Price</legend>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group text-muted">
+                                <label for="priceRange">Price Range</label>
+                                <input id="priceRange" type="text" class="form-control-plaintext" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 text-muted">
+                            <div id="slider-range"></div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="col-12">
+                    <button class="btn btn-secondary d-block mx-auto my-5 px-5 rounded-0 hvr-hang text-uppercase">Filter</button>
+                </div>
+                <a href="#" class="d-md-block d-none"><img class="img-fluid" src="assets/banner.png" alt=""></a>
+            </div>
+
+
+            <!-- ## TRIPS GALLERY ## -->
+
+
+            <div class="col-md-8 m-auto trips-section">
+                <div class="row pt-5">
+                    <div class="buttons">
+                        <p class="text-uppercase text-secondary">Sort By
+                            <select class="mr-1 text-muted font-weight-light border-0 ">
+                                <option value="">Popularity</option>
+                                <option value="" selected>Most Viewed</option>
+                                <option value="">Newest</option>
+                            </select>
+                        </p>
+                        <div class="list"><span></span><span></span></div>
+                        <div class="grid"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img class="img-fluid" src="assets/spain.jpeg" alt="luxor Ballon">
+                        <div class="trip-gallery bg-white pb-5 mb-3">
+
+                            <h6 class="text-uppercase text-secondary pt-3 pl-2">Luxor</h6>
+                            <span class="blockquote pl-2">Lorem ipsum dolor sit.</span>
+                            <p class="font-weight-light pl-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Sed, dolore!</p>
+                            <div class="rate">
+                                <p><i class="fa fa-clock-o f" style="font-size: 20px;"></i>
+                                    <span class="text-secondary h-25 font-weight-bold">12</span>
+                                    DAYS</p>
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <p class="text-right pr-3 mb-0">From <br><span class="text-secondary font-weight-bold">&#36;
+                                    1200</span><br> <strike>1800</strike></p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-1 mb-5 pb-5">
+                        <a href="" class="btn btn-block text-uppercase bg-info text-white hvr-sweep-to-right">Show more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ## FOOTER ## -->
+
+
+    <footer id="#footer" class="bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 my-3">
+                    <div class="footer-contact d-flex align-items-center">
+                        <p class="text-white font-weight-bold text-uppercase h5"><i class="fa fa-headphones fa-2x pr-3"></i>for more help</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 d-flex align-items-center justify-content-md-end  my-3">
+                    <p class="text-white font-weight-bold h5"><i class="fa fa-phone pr-3"></i>+ 1-555-555-555</p>
+                </div>
+                <div style="border-bottom: 1px solid rgba(0,0,0,0.3); height: 2px; width: 100%"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div>
+                        <img src="assets/logo-.png" class="img-fluid " alt="">
+                        <p class="text-white mt-4 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam repellendus sapiente est, placeat blanditiis reprehenderit quaerat id dolore enim sunt dolores facere, inventore commodi nostrum tempore labore eligendi rem adipisci!</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 offset-2 mt-3">
+                    <div class="row footer-nav">
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">Deal your tours</h5>
+                            <ul class="text-white font-weight-light mt-4">
+                                <li><a href="#"></a>Contact us</li>
+                                <li><a href="#"></a>Ordering &amp; Payment</li>
+                                <li><a href="#"></a>Shipping</li>
+                                <li><a href="#"></a>Returns</li>
+                                <li><a href="#"></a>FAQ</li>
+                                <li><a href="#"></a>Sizing Guide</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">resources</h5>
+                            <ul class="text-white font-weight-light text-capitalize mt-4">
+                                <li><a href="#"></a>manage my booking</li>
+                                <li><a href="#"></a>trips sitemap</li>
+                                <li><a href="#"></a>travel tips</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-white text-warning text-capitalize font-weight-light after pb-3">information</h5>
+                            <ul class="text-white font-weight-light text-capitalize mt-4">
+                                <li><a href="#"></a>about us</li>
+                                <li><a href="#"></a>work with us</li>
+                                <li><a href="#"></a>privacy policy</li>
+                                <li><a href="#"></a>terms &amp; conditions</li>
+                                <li><a href="#"></a>press enquires</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <img src="assets/awards.png" alt="">
+                        <img src="assets/holiday-check.png" alt="">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-md-end align-items-center">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item"><img src="assets/visa.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/mastercard.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/paypal.png" class="img-fluid" alt=""></li>
+                            <li class="list-inline-item"><img src="assets/cash.png" class="img-fluid" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter mt-4 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 text-center">
+                        <div>
+                            <p class="mb-0 text-white text-uppercase">Enjoy <span class="font-weight-bolder text-info">With</span><br><span class="text-info text-capitalize font-weight-bold">Deal Your Tours</span></p>
+                            <span class="text-light">Subscribe to get latest offers and deals</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center py-2">
+                        <form action="">
+                            <div class="subscribe input-group">
+                                <input id="search-box" size="50" type="text" placeholder="  Enter Your E-mail" />
+                                <button id="search-btn" value="" type="submit"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 d-flex justify-content-md-end justify-content-center py-md-0 pt-3 align-items-center social">
+                        <ul class="list-unstyled mb-0">
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https:facebook.com"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-white font-weight-light mb-0">Copyrights 2020 Deal Your Tours © <br>Made with ❤️ by Holol Development</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $("#slider-range").slider({
+            range: true,
+            min: 50,
+            max: 2000,
+            values: [75, 300],
+            slide: function(event, ui) {
+                $("#priceRange").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#priceRange").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+    </script>
+</body></html>

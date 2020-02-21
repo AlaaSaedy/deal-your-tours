@@ -1,0 +1,678 @@
+//// Extra small devices (portrait phones, less than 576px)
+//// No media query since this is the default in Bootstrap
+//
+//// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+//
+//// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+//
+//// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+//
+//// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+
+
+// Main Sass File
+@import "reset";
+
+@font-face {
+    font-family: RolleteQaku;
+    src: url(../fonts/RolleteQaku.ttf);
+
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/Myriadpro-Light.woff);
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/Myriadpro-Regular.woff)
+}
+
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/Myriadpro-Semi-Bold.woff);
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 800;
+    src: url(../fonts/Myriadpro-Bold.woff);
+}
+
+$bg-color: #f9f9f9;
+$bg-secondary: #009290;
+$primary: #FFFFFF;
+$secondary: #009290;
+$tags: #75BEE9;
+$footer: #0D374F;
+$search: #026168;
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3),
+        6: ($spacer * 9)),
+    $spacers);
+
+
+/* <!== ||| HEADER SECTION ||| ==!> */
+
+body {
+    background-color: $bg-color !important;
+    font-family: 'Myriad Pro' !important;
+}
+
+.topnav {
+    background: $secondary;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background: url('../assets/header-img.jpg') no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+.contact-info a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+        color: #f8f9fa;
+        text-decoration: none;
+    }
+}
+
+.currency select {
+    background: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: $primary;
+    font-size: 14px;
+
+    option {
+        background: rgba(226, 240, 251, 0.3);
+        color: #ddd;
+        font-size: 14px;
+    }
+}
+
+
+/* ## NAVIGATION ## */
+
+.navigation {
+    nav img {
+        max-width: 80%;
+    }
+}
+
+.tabs {
+    font-size: 15px;
+    padding: 0px;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #777;
+        padding: 10px 10px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition-duration: 0.6s;
+
+        &.active {
+            color: #fff;
+        }
+    }
+
+    .selector {
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 81px;
+        top: 0px;
+        z-index: 1;
+        border-radius: 50px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        background: #05abe0;
+        background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+        background: -webkit-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+        background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05abe0', endColorstr='#8200f4', GradientType=1);
+    }
+}
+
+/* == |||| MAIN TITLE |||| == */
+
+.main-title {
+    font-family: RolleteQaku;
+    font-size: 7rem;
+    color: $primary;
+    text-align: center;
+}
+
+
+/* || === BOOKING  FORM === || */
+
+
+#bookingForm {
+
+    .nav-link {
+        color: $secondary;
+
+        &.active {
+            background: $secondary;
+            color: $primary;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+
+    max-width: 75%;
+    margin: 0 auto;
+
+    .booking-fields {
+        background: $primary;
+    }
+
+    .text-left {
+        font-size: 20px;
+    }
+
+    .form-group {
+        .ui-datepicker-trigger {
+            position: absolute;
+            top: 60px;
+            right: 15px;
+        }
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #ccc;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+        }
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+
+    .booking-fields input.form-control {
+        border-radius: 0;
+    }
+}
+
+
+/* ## FEATURES ## */
+
+
+.features {
+    padding-top: 70px;
+
+    .rent-car {
+        background: url('../assets/feat-2.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        button {
+            background: $secondary;
+        }
+    }
+
+    .rent-car-info {
+        background: $secondary;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        .rating {
+            input {
+                display: none;
+            }
+
+            label {
+                color: $primary;
+                float: right;
+            }
+
+            label:before {
+                margin: 5px;
+                font-size: 1.25em;
+                font-family: FontAwesome;
+                display: inline-block;
+                content: "\f005";
+            }
+
+            .half:before {
+                content: "\f089";
+                position: absolute;
+            }
+
+            input:checked ~ label,
+            &:not(:checked) > label:hover,
+            &:not(:checked) > label:hover ~ label {
+                color: #FFD700;
+            }
+
+            input:checked ~ label,
+            &:not(:checked) > label:hover,
+            &:not(:checked) > label:hover ~ label {
+                color: #FFD700;
+            }
+        }
+    }
+
+    .about-us {
+        background: #75BEE9;
+        font-size: 14px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        button {
+            color: $secondary;
+
+            &:hover {
+                color: $primary !important;
+            }
+        }
+    }
+
+    .discover {
+        background: url('../assets/feat-1.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        button {
+            color: $secondary;
+
+            &:hover {
+                color: $primary !important;
+            }
+        }
+    }
+}
+
+
+/* ## EXPLORE DISTINATIONS ## */
+
+.content-area {
+    position: relative;
+
+    .cairo,
+    .luxor,
+    .sharm {
+        position: absolute;
+        bottom: 50px;
+        color: $primary;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .display {
+            visibility: hidden;
+        }
+    }
+
+    .custom-overlay {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+        height: 40%;
+        width: 80%;
+        display: inline-block;
+        margin: auto;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        h4 {
+            color: $secondary;
+            position: relative;
+            font-size: 25px;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            right: 10px;
+            transform: translateY(-50%);
+
+
+            button {
+                border-radius: 0 !important;
+            }
+        }
+    }
+
+}
+
+.owl-theme {
+
+    .owl-nav {
+
+        .owl-prev,
+        .owl-next {
+            background: $tags !important;
+        }
+
+        .owl-prev {
+            position: absolute;
+            left: 5px;
+            top: 40%;
+        }
+
+        .owl-next {
+            position: absolute;
+            right: 5px;
+            top: 40%;
+        }
+    }
+
+    .owl-dots {
+        .owl-dot span {
+            background: $secondary
+        }
+    }
+}
+
+/* ## UNMISSABLE TRIPS ## */
+
+.luxor-trip {
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    .rate {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+}
+
+#trip button,
+#blog button {
+    width: 200px;
+}
+
+
+/* ## BLOG ## */
+
+.blog-wrap {
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    .tag {
+        position: absolute;
+        display: inline-block;
+        background: rgba($tags, 0.8);
+        right: 20px;
+        height: 70px;
+        width: 60px;
+        padding-top: 8px;
+        transition: transform .8s ease-in-out, background .8s ease-in-out;
+    }
+
+    &:hover .tag {
+        transform: rotateY(360deg);
+        background: rgba(240, 178, 55, 0.8);
+    }
+
+    .title {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: $primary;
+    }
+}
+
+
+/* ## FOOTER ## */
+
+.footer-contact img {
+    width: 35px;
+}
+
+.footer-nav h5 {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: url('../assets/footer-icon.png') no-repeat center center;
+        width: 58px;
+        height: 5px;
+    }
+
+}
+
+.newsletter {
+
+    background: #026168;
+
+    p {
+        font-size: 28px;
+    }
+
+    #search-btn {
+        background: $secondary;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 0 25px 25px 0;
+        border: 0 none;
+    }
+
+    #search-box {
+        background: #0D374F !important;
+        padding: 10px;
+        border-radius: 30px 0 0 30px;
+        border: 0 none;
+        width: 82%;
+
+        &::placeholder {
+            color: $primary;
+            padding-left: 5px;
+        }
+    }
+
+    i {
+        font-size: 20px;
+        margin: 0 10px;
+        position: relative;
+    }
+}
+
+.social {
+
+    i {
+        background: #0d374f;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .fa-facebook::before,
+    .fa-twitter::before,
+    .fa-instagram::before,
+    .fa-linkedin::before {
+        position: absolute;
+        left: 9px;
+        top: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ## MEDIA QUERIES ## */
+
+@media (max-width : 992px) {
+
+    /* == || SITE MENU || == */
+
+    .navbar-toggler .fa-bars {
+        color: rgba($secondary, 0.5);
+    }
+
+    .navigation {
+        background: rgba($primary, 0.5);
+    }
+
+    .tabs {
+        font-size: 15px;
+        list-style: none;
+        background: none;
+        box-shadow: none;
+        display: block;
+        position: relative;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #6a6a6a;
+            padding: 10px 0;
+            display: block;
+            position: relative;
+            z-index: 1;
+            transition-duration: 0.6s;
+
+            &.active {
+                color: $secondary;
+            }
+        }
+
+        .selector {
+            background: none;
+        }
+    }
+
+
+    /* == || MAIN TITLE || == */
+
+    .main-title {
+        font-family: RolleteQaku;
+        font-size: 5rem;
+        color: $primary;
+        text-align: center;
+    }
+
+
+    #bookingForm {
+        max-width: 90%;
+        margin: 0 auto;
+
+        .booking-fields {
+            background: $primary;
+        }
+
+        .text-left {
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* ## FEATURES ## */
+
+    .features {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features {
+        margin-top: 150px;
+    }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
